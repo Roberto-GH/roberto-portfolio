@@ -1,0 +1,174 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+  title="About | Roberto Londoño"
+  description="About Roberto Londoño Lorem Ipsum"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About"
+        tagline=""
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work.jpg"
+          alt="Roberto Londoño at work"
+        />
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            I am an analytical person, proactive in search of solutions, with
+            high responsability level. Experience working in a team
+            high pressure environments. Training in web development, through
+            technologies like Java, Spring boot, Javascript, NodeJs, Angular
+            among other. Experience as a programmer under the framework of
+            Liferay development. Knowledge in Cloud Computing AWS in services
+            like lambda, api gateway, cloudwatch, dynamoDB, EC2, S3.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <ul>
+            <li>
+              <p>
+                Universidad Nacional de Colombia Programming and web development,
+                digital/multimedia content and computing resources 2020 - 2021
+              </p>
+            </li>
+            <li>
+              <p>GO from scratch EDteam Issuance: sept. 2021</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <ul>
+            <li>Java</li>
+            <li>Go</li>
+            <li>Spring Boot</li>
+            <li>Docker</li>
+            <li>Mysql</li>
+            <li>AWS</li>
+            <li>Liferay</li>
+            <li>Angular</li>
+            <li>NodeJs</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Soft Skills</h2>
+        <div class="content">
+          <ul>
+            <li>Problem-solving</li>
+            <li>Organization</li>
+            <li>Communication</li>
+            <li>Collaboration</li>
+            <li>Troubleshooting</li>
+            <li>Solution design</li>
+            <li>Prioritizing</li>
+            <li>Resource management</li>
+            <li>Scheduling</li>
+            <li>Analyzing</li>
+            <li>Explanation</li>
+            <li>Interpreting</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Experience</h2>
+        <div class="content">
+          <p>
+            <ul>
+              <li>
+                <p>Back-end developer</p>
+                <p>Zenta Group</p>
+                <p>Full time nov. 2021 - present</p>
+                <p>Santiago, Chile</p>
+              </li>
+              <li>
+                <p>Java developer, Liferay</p>
+                <p>Aria PSW</p>
+                <p>Full time mar. 2021 - nov. 2021</p>
+                <p>Bogotá, Distrito Capital, Colombia</p>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
