@@ -21,3 +21,8 @@ As for the user interface, I used Angular as front-end technology, allowing me t
 The source code for the API here: https://github.com/Roberto-GH/authentication-api
 
 The source code for the front-end here: https://github.com/Roberto-GH/authentication-web
+
+It should be noted that the back-end is deployed on AWS through the Elastic Beanstalk service that automatically manages the deployment,
+from capacity provisioning, load balancing and autoscaling to Monitoring the state of the application.
+
+For its part, the front-end is located in a back-end of S3.

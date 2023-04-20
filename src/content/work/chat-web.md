@@ -24,3 +24,8 @@ You can use it in your day to day is very useful !!!!. It should be noted that i
 The source code for the API here: https://github.com/Roberto-GH/chatgpt-api
 
 The source code for the front-end here: https://github.com/Roberto-GH/chatbot-web
+
+In this case, the back-end was deployed in AWS through the ECS service (Elastic Container Service) and
+Fargate that makes it easy to run and scale containerized data processing workloads.
+
+For the front-end use Netlify, a platform designed for the deployment of static websites.
