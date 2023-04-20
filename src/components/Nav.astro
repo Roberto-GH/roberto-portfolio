@@ -59,7 +59,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			<div class="socials">
 				{
 					iconLinks.map(({ href, icon, label }) => (
-						<a href={href} class="social">
+						<a href={href} class="social" target="_blank">
 							<span class="sr-only">{label}</span>
 							<Icon icon={icon} />
 						</a>
@@ -140,7 +140,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		border: 0;
 		border-radius: 999rem;
 		padding: 0.5rem;
-		font-size: 1.5rem;
+		font-size: 2.2rem;
 		color: var(--gray-300);
 		background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
 		box-shadow: var(--shadow-md);
