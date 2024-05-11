@@ -6,7 +6,7 @@ imgRes: /assets/stock-3b.jpg
 link: http://authentication-web.s3-website-us-east-1.amazonaws.com/#/home
 img_alt: User authentication
 description: |
-  I developed a platform that allows to authenticate and manage users.
+  Desarrollé una plataforma que permite autenticar y administrar usuarios.
 tags:
   - Spring Boot
   - JWT
@@ -14,15 +14,14 @@ tags:
   - MySQL
 ---
 
-Authentication Web is a login page created with tools like Spring Boot and Spring Security allowing me to authenticate, authorize and manage users and roles. This using the JSON Web Token (JWT) standard that defines a compact and autonomous way to transmit information securely between parties as a JSON object. In addition, including a refresh token method allowing to maintain the user's session in the browser safely, regardless of the use of cookies.
+Authentication Web es una página de inicio de sesión creada con herramientas como Spring Boot y Spring Security que me permiten autenticar, autorizar y administrar usuarios y roles. Esto utilizando el estándar JSON Web Token (JWT) que define una forma compacta y autónoma de transmitir información de forma segura entre partes como un objeto JSON. Además, incluye un método de token de actualización que permite mantener la sesión del usuario en el navegador de forma segura, independientemente del uso de cookies.
 
-As for the user interface, I used Angular as front-end technology, allowing me to adopt one of the most used architectures in recent years, Single Page Applications (SPAs). As for the styles part, use Bootstrap that brings a set of front-end tools, thus achieving fast, efficient and scalable development.
+En cuanto a la interfaz de usuario, utilicé Angular como tecnología front-end, lo que me permitió adoptar una de las arquitecturas más utilizadas en los últimos años, las Aplicaciones de una sola página (SPA). En cuanto a la parte de estilos, utiliza Bootstrap que trae un conjunto de herramientas front-end, logrando así un desarrollo rápido, eficiente y escalable.
 
-The source code for the API here: https://github.com/Roberto-GH/authentication-api
+El código fuente de la API aquí: https://github.com/Roberto-GH/authentication-api
 
-The source code for the front-end here: https://github.com/Roberto-GH/authentication-web
+El código fuente del front-end aquí: https://github.com/Roberto-GH/authentication-web
 
-It should be noted that the back-end is deployed on AWS through the Elastic Beanstalk service that automatically manages the deployment,
-from capacity provisioning, load balancing and autoscaling to Monitoring the state of the application.
+Cabe señalar que el backend se implementa en AWS a través del servicio Elastic Beanstalk que administra automáticamente la implementación, desde aprovisionamiento de capacidad, equilibrio de carga y escalado automático hasta monitoreo del estado de la aplicación.
 
-For its part, the front-end is located in a back-end of S3.
+Por su parte, el front-end se ubica en un bucket de S3.
