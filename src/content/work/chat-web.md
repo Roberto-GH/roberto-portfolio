@@ -6,26 +6,26 @@ imgRes: /assets/stock-2b.jpg
 link: https://chat-web.roberto-londono.website/
 img_alt: Chat web capture
 description: |
-  API and interface that allows you to query an AI and interact with it conversationally.
+  API e interfaz que le permite consultar una IA e interactuar con ella de forma conversacional.
 tags:
   - Spring Boot
   - Svelte
   - Open AI
 ---
 
-In Web Chat my main focus was to implement an API with methods that access the different resources offered by ChatGPT, adding security and abstraction so that it becomes a scalable development.
+En Web Chat mi enfoque principal fue implementar una API con métodos que accedan a los diferentes recursos que ofrece ChatGPT, agregando seguridad y abstracción para que se convierta en un desarrollo escalable.
 
-This was done with Spring Boot using tools such as Spring Security, allowing the addition of an authorization layer that allows secure access.
+Esto se hizo con Spring Boot utilizando herramientas como Spring Security, permitiendo agregar una capa de autorización que permite el acceso seguro.
 
-At the Front-End level, I used Svelte as a development tool, thus creating an interface similar to the chat we conventionally use, although it is a web application, a responsive design was included so that the app is accessible from different devices.
+A nivel de Front-End utilicé Svelte como herramienta de desarrollo creando así una interfaz similar al chat que usamos convencionalmente, aunque es una aplicación web se incluyé un diseño responsive para que la app sea accesible desde diferentes dispositivos.
 
-You can use it in your day to day is very useful !!!!. It should be noted that it is under the free Open AI cap, so it has limited use.
+Puedes utilizarlo en tu día a día es muy útil!!!!. Cabe destacar que se encuentra bajo el límite gratuito de Open AI, por lo que tiene un uso limitado.
 
-The source code for the API here: https://github.com/Roberto-GH/chatgpt-api
+El código fuente de la API aquí: https://github.com/Roberto-GH/chatgpt-api
 
-The source code for the front-end here: https://github.com/Roberto-GH/chatbot-web
+El código fuente del front-end aquí: https://github.com/Roberto-GH/chatbot-web
 
-In this case, the back-end was deployed in AWS through the ECS service (Elastic Container Service) and
-Fargate that makes it easy to run and scale containerized data processing workloads.
+En este caso, el backend se implementé en AWS a través del servicio ECS (Elastic Container Service) y
+Fargate que facilita la ejecución y escalamiento de cargas de trabajo de procesamiento de datos en contenedores.
 
-For the front-end use Netlify, a platform designed for the deployment of static websites.
+Para el front-end utilice Netlify, una plataforma diseñada para el despliegue de sitios web estáticos.
