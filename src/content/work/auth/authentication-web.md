@@ -3,7 +3,7 @@ title: Authentication Web
 publishDate: 2020-03-04 00:00:00
 img: /assets/stock-3a.jpg
 imgRes: /assets/stock-3b.jpg
-link: http://auth-web.roberto-londono.website.s3-website-us-east-1.amazonaws.com/#/home
+link: http://auth-web.roberto-londono.website/#/home
 img_alt: User authentication
 description: |
   Desarrollé una plataforma que permite autenticar y administrar usuarios.
