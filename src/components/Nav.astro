@@ -1,12 +1,17 @@
 ---
-import Icon, { Props as IconProps } from './Icon.astro';
+import Icon, { type Props as IconProps } from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
+import LanguagePicker from './LanguagePicker.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Proyectos', href: '/work/' },
-	{ label: 'Sobre mí', href: '/about/' },
+	{ label: 'Home', href: `/${lang}/` },
+	{ label: 'Proyectos', href: `/${lang}/work/` },
+	{ label: 'Sobre mí', href: `/${lang}/about/` },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -19,7 +24,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
+		<a href={`/${lang}/`} class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			Roberto Londoño
 		</a>
@@ -44,7 +49,8 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== `/${lang}/` && Astro.url.pathname.startsWith(href)) ||
+										(href == `/${lang}/` && Astro.url.pathname == `/${lang}`)							
 								},
 							]}
 							href={href}
@@ -68,6 +74,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			</div>
 
 			<div class="theme-toggle">
+				<LanguagePicker />
 				<ThemeToggle />
 			</div>
 		</div>
@@ -306,7 +313,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		}
 	}
 
-	@media (min-width: 60em) {
+	@media (min-width: 67em) {
 		.socials {
 			display: flex;
 			justify-content: flex-end;

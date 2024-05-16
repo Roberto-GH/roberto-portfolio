@@ -1,0 +1,218 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import ContactCTA from "../../components/ContactCTA.astro";
+import Hero from "../../components/Hero.astro";
+---
+
+<BaseLayout
+  title="About | Roberto Londoño"
+  description="About Roberto Londoño Lorem Ipsum"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero title="Sobre mí" tagline="">
+        <div class="about-img">
+          <img
+            width="465"
+            height="261"
+            src="/assets/at-work.jpg"
+            alt="Roberto Londoño at work"
+          />
+        </div>
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            Profesional analítico y proactivo con 3 años de experiencia en
+            desarrollo web y Cloud Computing. Me apasiona resolver problemas
+            complejos y crear soluciones innovadoras que generen un impacto
+            positivo.
+          </p><br />
+          <p>
+            Poseo sólidas habilidades de análisis, resolución de problemas y
+            trabajo en equipo, lo que me permite trabajar de manera efectiva en
+            entornos de alta presión.
+          </p><br />
+          <p>
+            Mis habilidades clave incluyen: Desarrollo web: Java, Spring Boot,
+            Docker, Golang, Angular, Liferay. AWS Cloud Computing: Lambda, API
+            Gateway, CloudWatch, DynamoDB, EC2, S3.
+          </p><br />
+          <p>
+            En mi último puesto como desarrollador back-end experto, incentive
+            la implementación de test unitarios permitiendo detectar errores de
+            forma temprana asegurando el cumplimiento de los estándares de
+            calidad del cliente. Estoy seguro de que mis habilidades y
+            experiencia serían un valioso aporte para su equipo.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Experiencia</h2>        
+        <div class="content">
+          <p>
+            <ul>
+              <li>
+                <p>Back-end developer expert</p>
+                <p>Zenta Group</p>
+                <p>Full time nov. 2021 - actualidad</p>
+                <p>Santiago, Chile</p>
+              </li><br />
+              <li>
+                <p>Back-end developer</p>
+                <p>Stefanini Perú</p>
+                <p>Full time oct. 2023 - may. 2024</p>
+                <p>Lima, Perú</p>
+              </li><br />
+              <li>
+                <p>Java developer, Liferay</p>
+                <p>Aria PSW</p>
+                <p>Full time mar. 2021 - nov. 2021</p>
+                <p>Bogotá, Distrito Capital, Colombia</p>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Educación
+          <img
+          width="120"
+          height="120"
+          src="/assets/aws-certified.png"
+          alt="AWS certified"
+        />
+        </h2>
+        <div class="content">
+          <ul>
+            <li>
+              Universidad Nacional de Colombia Programación y desarrollo web,
+              Contenidos digitales/multimedia y recursos informáticos 2020 -
+              2021.
+            </li>
+            <li>
+              Universidad de Antioquia programación con énfasis en desarrollo
+              de aplicaciones web 2021.
+            </li>            
+            <li>
+              AWS Certified Cloud Practitioner: AWS Training and Certification.
+              Emisión: nov 01. 2023
+            </li>
+            <li>GO desde cero EDteam. Emisión: sept. 2021</li>
+            <li>
+              Spring: Spring MVC: Linkedin Learning. Emisión: jun 21. 2023
+            </li>
+            <li>
+              Despliegue de Docker en AWS: Linkedin Learning. Emisión: abr 05.
+              2023
+            </li>
+            <li>
+              Implementación y cumplimiento del estandar PCI DSS: Udemy.
+              Emisión: jul 26. 2023
+            </li>
+            <li>
+              Scrum foundation professional: CertiProf. Emisión: abr 18. 2021
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <ul>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Docker</li>
+            <li>Mysql</li>
+            <li>AWS</li>
+            <li>Go</li>
+            <li>Angular</li>
+            <li>Liferay</li>
+            <li>NodeJs</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Soft Skills</h2>
+        <div class="content">
+          <ul>
+            <li>Organización</li>
+            <li>Comunicación</li>
+            <li>Colaboración</li>
+            <li>Resolución de problemas</li>
+            <li>Gestión de recursos</li>
+            <li>Análisis</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .about-img {
+    display: flex;
+    justify-content: center;    
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }  
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
