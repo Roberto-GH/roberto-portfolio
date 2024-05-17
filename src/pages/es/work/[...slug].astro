@@ -1,29 +1,28 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 
-import ContactCTA from '../../components/ContactCTA.astro';
-import Hero from '../../components/Hero.astro';
-import Icon from '../../components/Icon.astro';
-import Pill from '../../components/Pill.astro';
+import ContactCTA from '../../../components/ContactCTA.astro';
+import Hero from '../../../components/Hero.astro';
+import Icon from '../../../components/Icon.astro';
+import Pill from '../../../components/Pill.astro';
+import { getLangFromUrl } from '../../../i18n/utils';
 
-interface Props {
-	entry: CollectionEntry<'work'>;
+const lang = getLangFromUrl(Astro.url);
+
+export async function getStaticPaths() {	
+  const pages = await getCollection('work',({ id }) => {
+  return id.startsWith('es/');
+});
+  const paths = pages.map(page => {
+    const [lang, ...slug] = page.slug.split('/');				
+    return { params: { lang, slug: slug.join('/') || undefined }, props: page };
+  });	
+  return paths;
 }
 
-// This is a dynamic route that generates a page for every Markdown file in src/content/
-// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
-// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
-export async function getStaticPaths() {
-	const work = await getCollection('work');
-	return work.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
-}
-
-const { entry } = Astro.props;
+const entry = Astro.props;
 const { Content } = await entry.render();
 ---
 
@@ -32,14 +31,14 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Mi trabajo</a>
+					<a class="back-link" href={`/${lang}/work/`}><Icon icon="arrow-left" /> Proyectos</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+								{entry.data.tags.map((t: unknown) => <Pill>{t}</Pill>)}
 							</div>							
 							<p class="description">{entry.data.description}
-								<a class="back-link website" href={entry.data.link} target="_blank">Ir al website <Icon icon="arrow-right" /></a>
+								<a class="back-link website" href={entry.data.link} target="_blank">Ir al sitio web <Icon icon="arrow-right" /></a>
 							</p>							
 						</div>						
 					</Hero>					
@@ -70,6 +69,7 @@ const { Content } = await entry.render();
 
 	.back-link {
 		display: none;
+		font-size: x-large;
 	}
 
 	.details {

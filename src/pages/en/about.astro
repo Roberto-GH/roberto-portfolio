@@ -1,0 +1,211 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import ContactCTA from "../../components/ContactCTA.astro";
+import Hero from "../../components/Hero.astro";
+---
+
+<BaseLayout title="About | Roberto Londoño" description="About Roberto Londoño">
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero title="About me" tagline="">
+        <div class="about-img">
+          <img
+            width="465"
+            height="261"
+            src="/assets/at-work.jpg"
+            alt="Roberto Londoño at work"
+          />
+        </div>
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            Analytical and proactive professional with 3 years of experience in
+            web development and Cloud Computing. I am passionate about solving
+            complex problems and creating innovative solutions that generate a
+            positive impact.
+          </p><br />
+          <p>
+            I possess strong analytical, problem-solving, and teamwork skills,
+            which enable me to thrive in high-pressure environments.
+          </p><br />
+          <p>
+            My key skills include:Web Development: Java, Spring Boot, Docker,
+            Golang, Angular, Liferay AWS Cloud Computing: Lambda, API Gateway,
+            CloudWatch, DynamoDB, EC2, S3.
+          </p><br />
+          <p>
+            In my previous role as a senior back-end developer, I championed the
+            implementation of unit testing, enabling early error detection and
+            ensuring adherence to client quality standards. I am confident that
+            my skills and experience will be a valuable asset to your team.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Experience</h2>
+        <div class="content">
+          <p>
+            <ul>
+              <li>
+                <p>Back-end developer expert</p>
+                <p>Zenta Group</p>
+                <p>Full time nov. 2021 - present</p>
+                <p>Santiago, Chile</p>
+              </li><br />
+              <li>
+                <p>Back-end developer</p>
+                <p>Stefanini Perú</p>
+                <p>Full time oct. 2023 - may. 2024</p>
+                <p>Lima, Perú</p>
+              </li><br />
+              <li>
+                <p>Java developer, Liferay</p>
+                <p>Aria PSW</p>
+                <p>Full time mar. 2021 - nov. 2021</p>
+                <p>Bogotá, Distrito Capital, Colombia</p>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">
+          Education
+          <img
+            width="120"
+            height="120"
+            src="/assets/aws-certified.png"
+            alt="AWS certified"
+          />
+        </h2>
+        <div class="content">
+          <ul>
+            <li>
+              Sure, here is the English translation of the Spanish phrase:
+              National University of Colombia Programming and Web Development,
+              Digital/Multimedia Content and Information Resources 2020 - 2021
+            </li>
+            <li>
+              University of Antioquia Programming with an emphasis on web
+              application development 2021
+            </li>
+            <li>
+              AWS Certified Cloud Practitioner: AWS Training and Certification.
+              Issue: nov 01. 2023
+            </li>
+            <li>GO from Scratch - EDteam. Issued: September 2021</li>
+            <li>Spring: Spring MVC: Linkedin Learning. Issue: jun 21. 2023</li>
+            <li>
+              Deploying Docker on AWS: Linkedin Learning. Issue: abr 05. 2023
+            </li>
+            <li>
+              Implementation and Compliance with the PCI DSS Standard:
+              Udemy.Issued: July 26, 2023
+            </li>
+            <li>
+              Scrum foundation professional: CertiProf. Issue: abr 18. 2021
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <ul>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Docker</li>
+            <li>Mysql</li>
+            <li>AWS</li>
+            <li>Go</li>
+            <li>Angular</li>
+            <li>Liferay</li>
+            <li>NodeJs</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Soft Skills</h2>
+        <div class="content">
+          <ul>
+            <li>Organization</li>
+            <li>Communication</li>
+            <li>Collaboration</li>
+            <li>Problem resolution</li>
+            <li>Resource management</li>
+            <li>Analysis</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .about-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>

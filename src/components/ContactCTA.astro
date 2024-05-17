@@ -1,13 +1,16 @@
 ---
 import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <aside>
-	<h2>Interesado en trabajar juntos?</h2>
-	<!-- <CallToAction href="mailto:roberthdrums@gmail.com"> -->
+	<h2>{t('contact.question')}</h2>	
 	<CallToAction href="https://mail.google.com/mail/?view=cm&fs=1&to=roberthdrums@gmail.com" isBlankTarget={true}>
-		Enviame un mensaje
+		{t('contact.call')}
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
 </aside>
@@ -36,7 +39,7 @@ import Icon from './Icon.astro';
 			padding: 7.5rem;
 			flex-direction: row;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			justify-content: space-around;
 		}
 
 		h2 {
