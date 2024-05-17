@@ -1,17 +1,17 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 interface Props {
 	project: CollectionEntry<'work'>;
 }
 
 const { data, slug } = Astro.props.project;
+const [es, ...sluges] = slug.split('/');
 ---
-<a class="card" href={`/${lang}/work/${slug}`}>	
+<a class="card" href={`/${lang}/work/${sluges.join('/')}`}>	
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 	<span class="title">{data.title}</span>
 </a>

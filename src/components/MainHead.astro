@@ -1,5 +1,9 @@
 ---
 import '../styles/global.css';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
 	title?: string | undefined;
@@ -7,8 +11,8 @@ interface Props {
 }
 
 const {
-	title = 'Roberto Londoño: Personal Site',
-	description = 'The personal site of Roberto Londoño',
+	title = t('mainhead.title'),
+	description = t('mainhead.description'),
 } = Astro.props;
 ---
 

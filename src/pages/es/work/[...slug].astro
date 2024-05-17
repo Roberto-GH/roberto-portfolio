@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
@@ -7,27 +7,22 @@ import ContactCTA from '../../../components/ContactCTA.astro';
 import Hero from '../../../components/Hero.astro';
 import Icon from '../../../components/Icon.astro';
 import Pill from '../../../components/Pill.astro';
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import { getLangFromUrl } from '../../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
-interface Props {
-	entry: CollectionEntry<'work'>;
+export async function getStaticPaths() {	
+  const pages = await getCollection('work',({ id }) => {
+  return id.startsWith('es/');
+});
+  const paths = pages.map(page => {
+    const [lang, ...slug] = page.slug.split('/');				
+    return { params: { lang, slug: slug.join('/') || undefined }, props: page };
+  });	
+  return paths;
 }
 
-// This is a dynamic route that generates a page for every Markdown file in src/content/
-// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
-// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
-export async function getStaticPaths() {
-	const work = await getCollection('work');
-	return work.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
-}
-
-const { entry } = Astro.props;
+const entry = Astro.props;
 const { Content } = await entry.render();
 ---
 

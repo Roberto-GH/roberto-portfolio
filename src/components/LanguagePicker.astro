@@ -3,10 +3,14 @@ import { getLangFromUrl, getLangFromUrlForToggle, useTranslations } from '../i18
 
 const lang = getLangFromUrl(Astro.url);
 const switchLang = getLangFromUrlForToggle(Astro.url);
+
+
+const [, ...slug] = Astro.url.pathname.split('/');
+slug.shift()
 ---
 
 <language-picker>
-	<a class:list={[`${lang}`]} href={`/${switchLang}/`}>
+	<a class:list={[`${lang}`]} href={`/${switchLang + '/' + slug.join('/')}`}>
 		<span class="sr-only">ES Language</span>
 		<span class="icon english">EN</span>
 		<span class="icon spanish">ES</span>

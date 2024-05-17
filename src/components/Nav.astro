@@ -7,14 +7,12 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-/** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: `/${lang}/` },
-	{ label: 'Proyectos', href: `/${lang}/work/` },
-	{ label: 'Sobre mí', href: `/${lang}/about/` },
+	{ label: t('nav.home'), href: `/${lang}/` },
+	{ label: t('nav.projects'), href: `/${lang}/work/` },
+	{ label: t('nav.about'), href: `/${lang}/about/` },
 ];
 
-/** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [	
 	{ label: 'GitHub', href: 'https://github.com/Roberto-GH', icon: 'github-logo' },
 	{ label: 'Linkedin', href: 'https://www.linkedin.com/in/roberto-londo%C3%B1o/', icon: 'linkedin-logo' },
@@ -85,24 +83,19 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 	class MenuButton extends HTMLElement {
 		constructor() {
 			super();
-
 			// Inject menu toggle button when JS runs.
 			this.appendChild(this.querySelector('template')!.content.cloneNode(true));
 			const btn = this.querySelector('button')!;
-
 			// Hide menu (shown by default to support no-JS browsers).
 			const menu = document.getElementById('menu-content')!;
 			menu.hidden = true;
-
 			/** Set whether the menu is currently expanded or collapsed. */
 			const setExpanded = (expand: boolean) => {
 				btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
 				menu.hidden = !expand;
 			};
-
 			// Toggle menu visibility when the menu button is clicked.
 			btn.addEventListener('click', () => setExpanded(menu.hidden));
-
 			// Hide menu button for large screens.
 			const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
 				setExpanded(e.matches);

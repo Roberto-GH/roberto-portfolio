@@ -1,27 +1,20 @@
 ---
 import { getCollection } from "astro:content";
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import { getLangFromUrl } from '../../i18n/utils';
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
-// Component Imports
 import CallToAction from "../../components/CallToAction.astro";
 import Grid from "../../components/Grid.astro";
 import Hero from "../../components/Hero.astro";
 import Icon from "../../components/Icon.astro";
 import Pill from "../../components/Pill.astro";
 import PortfolioPreview from "../../components/PortfolioPreview.astro";
-
-// Page section components
 import ContactCTA from "../../components/ContactCTA.astro";
 import Skills from "../../components/Skills.astro";
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
-// Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))
+  .filter(w => w.slug.startsWith('es/'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
@@ -183,8 +176,6 @@ const techStack = [
 		}
 	}
 
-	/* ====================================================== */
-
 	.section {
 		display: grid;
 		gap: 2rem;
@@ -261,9 +252,7 @@ const techStack = [
 		.cta {
 			grid-area: cta;
 		}
-	}
-
-	/* ====================================================== */
+	}	
 
 	.mention-card {
 		display: block;

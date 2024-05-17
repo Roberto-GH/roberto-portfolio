@@ -8,20 +8,20 @@ import PortfolioPreview from '../../components/PortfolioPreview.astro';
 import Hero from '../../components/Hero.astro';
 import Grid from '../../components/Grid.astro';
 
-const projects = (await getCollection('work')).sort(
+const projects = (await getCollection('work')).filter(w => w.slug.startsWith('en/')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 ---
 
 <BaseLayout
-	title="Proyectos | Roberto Londoño"
-	description="Conoce los proyectos más recientes de Roberto Londoño"
+	title="Projects | Roberto Londoño"
+	description="Familiarize yourself with Roberto Londoño's latest projects."
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="Proyectos"
-				tagline="Vea algunos ejemplos de cómo he utilizado mis habilidades para crear soluciones que han generado gran valor en la industria del software."
+				title="Projects"
+				tagline="See some examples of how I have used my skills to create solutions that have generated great value in the software industry."
 				align="start"
 			/>
 			<Grid variant="offset">
