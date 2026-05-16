@@ -11,7 +11,7 @@ tags:
   - Google ADK
   - Hexagonal Architecture
   - Java
-link: https://github.com/Roberto-GH/adventures-creator
+link: https://github.com/Roberto-GH/adventure-picture-agent
 ---
 
 **Adventures Creator** is an ecosystem designed to simplify and empower the creation of artificial intelligence agents. The core of this project lies in the integration of the **Google ADK (Agent Development Kit)**, allowing for the smooth orchestration of complex behaviors and cognitive capabilities.

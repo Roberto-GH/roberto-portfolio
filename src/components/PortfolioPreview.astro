@@ -8,8 +8,8 @@ interface Props {
 	project: CollectionEntry<'work'>;
 }
 
-const { data, slug } = Astro.props.project;
-const [es, ...sluges] = slug.split('/');
+const { data, id } = Astro.props.project;
+const [es, ...sluges] = id.split('/');
 const isCssBackground = data.img === 'css';
 ---
 <a class:list={["card", { "css-bg": isCssBackground }]} href={`/${lang}/work/${sluges.join('/')}`}>	

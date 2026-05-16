@@ -15,9 +15,9 @@ tags:
 ---
 
 Telefónica del Perú has implemented a specialized portal that enables customers to register their complaints, ensuring compliance with the regulations established by the Supervisory Body for Private Investment in Telecommunications (OSIPTEL).
-
+<br><br>
 Customer Complaint Registration Portal: The portal provides a user-friendly interface for customers to register their complaints, streamlining the process and facilitating communication with Telefónica del Perú.
-
+<br><br>
 Spring Boot Backend-for-Frontend: A Spring Boot backend-for-frontend architecture was implemented to centralize and simplify the consumption of services required for complaint registration functionality. This REST API approach enhances the usability and maintainability of the application.
-
+<br><br>
 Spring Cloud Config Server: A Spring Cloud Config Server was implemented to centralize application configurations, adhering to Telefónica's development guidelines. This centralized approach facilitates consistent and manageable configuration management.

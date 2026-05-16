@@ -10,9 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.8.4"
+    "astro": "^6.3.3"
   },
   "devDependencies": {
-    "@astrojs/partytown": "^2.1.0"
+    "@astrojs/partytown": "^2.1.7",
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0"
   }
 }

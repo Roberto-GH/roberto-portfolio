@@ -14,7 +14,7 @@ import Skills from "../../components/Skills.astro";
 const lang = getLangFromUrl(Astro.url);
 
 const projects = (await getCollection("work"))
-  .filter(w => w.slug.startsWith('en/'))
+  .filter(w => w.id.startsWith('en/'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 

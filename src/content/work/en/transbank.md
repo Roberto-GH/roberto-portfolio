@@ -15,15 +15,15 @@ tags:
 ---
 
 Transbank is a leading provider of online payment solutions in Chile, offering a range of services that facilitate secure and convenient transactions for businesses of all sizes.
-
+<br><br>
 Contributions to Transbank's Private Portal
-
+<br><br>
 Enhanced User Experience: Contributed to the development of a system that enables users to seamlessly review all credits related to their sales, enhancing the overall user experience within Transbank's private portal.
-
+<br><br>
 Technology Stack: Utilized a combination of technologies, including Java, JSP, AWS, and Bootstrap, to deliver a robust and scalable solution.
-
+<br><br>
 Impact on Transbank's Growth
-
+<br><br>
 Streamlined Payment Processes: The developed system streamlined the process for businesses to manage their sales-related credits, contributing to Transbank's overall growth and efficiency.
-
+<br><br>
 Expanded Customer Base: The enhanced user experience and simplified payment processes attracted new customers and fostered loyalty among existing ones.
