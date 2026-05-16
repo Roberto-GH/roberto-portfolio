@@ -1,7 +1,7 @@
 ---
 title: Telefónica de Perú
 publishDate: 2019-12-01 00:00:00
-img: /assets/background-telefonica.jpg
+img: css
 imgRes: /assets/movistar.png
 link: https://www.movistar.com.pe/soporte-reclamos-disconformidad/registro-de-reclamos
 img_alt: Movistar capture

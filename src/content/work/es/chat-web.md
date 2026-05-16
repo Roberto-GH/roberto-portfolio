@@ -1,7 +1,7 @@
 ---
 title: Chat Web AI
 publishDate: 2019-12-01 00:00:00
-img: /assets/background-chat.jpg
+img: css
 imgRes: /assets/chat.png
 link: https://chat-web.roberto-londono.website/
 img_alt: Chat web capture
@@ -13,19 +13,19 @@ tags:
   - Open AI
 ---
 
-En Web Chat mi enfoque principal fue implementar una API con métodos que accedan a los diferentes recursos que ofrece ChatGPT, agregando seguridad y abstracción para que se convierta en un desarrollo escalable.
+En Web Chat mi enfoque principal fue implementar una API con m&eacute;todos que accedan a los diferentes recursos que ofrece ChatGPT, agregando seguridad y abstracci&oacute;n para que se convierta en un desarrollo escalable.
 
-Esto se hizo con Spring Boot utilizando herramientas como Spring Security, permitiendo agregar una capa de autorización que permite el acceso seguro.
+Esto se hizo con Spring Boot utilizando herramientas como Spring Security, permitiendo agregar una capa de autorizaci&oacute;n que permite el acceso seguro.
 
-A nivel de Front-End utilicé Svelte como herramienta de desarrollo creando así una interfaz similar al chat que usamos convencionalmente, aunque es una aplicación web se incluye un diseño responsive para que la app sea accesible desde diferentes dispositivos.
+A nivel de Front-End utilic&eacute; Svelte como herramienta de desarrollo creando as&iacute; una interfaz similar al chat que usamos convencionalmente, aunque es una aplicaci&oacute;n web se incluye un dise&ntilde;o responsive para que la app sea accesible desde diferentes dispositivos.
 
-Puedes utilizarlo en tu día a día es muy útil!!!!. Cabe destacar que se encuentra bajo el límite gratuito de Open AI, por lo que tiene un uso limitado.
+Puedes utilizarlo en tu d&iacute;a a d&iacute;a es muy &uacute;til!!!!. Cabe destacar que se encuentra bajo el l&iacute;mite gratuito de Open AI, por lo que tiene un uso limitado.
 
-El código fuente de la API aquí: https://github.com/Roberto-GH/chatgpt-api
+El c&oacute;digo fuente de la API aqu&iacute;: https://github.com/Roberto-GH/chatgpt-api
 
-El código fuente del front-end aquí: https://github.com/Roberto-GH/chatbot-web
+El c&oacute;digo fuente del front-end aqu&iacute;: https://github.com/Roberto-GH/chatbot-web
 
-En este caso, el backend se implemento en AWS a través del servicio ECS (Elastic Container Service) y
-Fargate que facilita la ejecución y escalamiento de cargas de trabajo de procesamiento de datos en contenedores.
+En este caso, el backend se implemento en AWS a trav&eacute;s del servicio ECS (Elastic Container Service) y
+Fargate que facilita la ejecuci&oacute;n y escalamiento de cargas de trabajo de procesamiento de datos en contenedores.
 
-Para el front-end utilicé Netlify, una plataforma diseñada para el despliegue de sitios web estáticos.
+Para el front-end utilic&eacute; Netlify, una plataforma dise&ntilde;ada para el despliegue de sitios web est&aacute;ticos.

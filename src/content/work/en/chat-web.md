@@ -1,7 +1,7 @@
 ---
 title: Chat Web AI
 publishDate: 2019-12-01 00:00:00
-img: /assets/background-chat.jpg
+img: css
 imgRes: /assets/chat.png
 link: https://chat-web.roberto-londono.website/
 img_alt: Chat web capture

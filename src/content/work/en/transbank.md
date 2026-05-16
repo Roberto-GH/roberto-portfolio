@@ -1,7 +1,7 @@
 ---
 title: Transbank S.A
 publishDate: 2019-12-01 00:00:00
-img: /assets/background-transbank.jpg
+img: css
 imgRes: /assets/transbank.png
 link: https://privado.transbank.cl/
 img_alt: Transbank capture

@@ -1,9 +1,9 @@
 ---
 title: Authentication Web
 publishDate: 2020-03-04 00:00:00
-img: /assets/background-auth.jpg
+img: css
 imgRes: /assets/auth.png
-link: http://auth-web.roberto-londono.website/#/home
+link: https://auth-web.roberto-londono.website/#/home
 img_alt: User authentication
 description: |
   Developed a User Authentication and Management Platform.
