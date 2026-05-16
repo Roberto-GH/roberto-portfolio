@@ -1,0 +1,20 @@
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+
+const workCollection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/work" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishDate: z.coerce.date(),
+    tags: z.array(z.string()),
+    img: z.string(),
+    imgRes: z.string(),
+    link: z.string(),
+    img_alt: z.string().optional()
+  })
+});
+
+export const collections = {
+  'work': workCollection
+};

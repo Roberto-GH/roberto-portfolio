@@ -1,4 +1,8 @@
 /* Global variables */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
 	/* Colors */
 	--gray-0: #090b11;
@@ -69,6 +73,11 @@
 	--font-body: 'Public Sans', var(--font-system);
 	--font-brand: Rubik, var(--font-system);
 
+	--tw-prose-body: var(--gray-200);
+	--tw-prose-headings: var(--gray-100);
+	--tw-prose-links: var(--link-color);
+	--tw-prose-bold: var(--gray-100);
+	--tw-prose-quotes: var(--gray-0);
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
 }

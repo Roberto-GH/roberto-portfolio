@@ -1,7 +1,7 @@
 ---
 title: Chat Web AI
 publishDate: 2019-12-01 00:00:00
-img: /assets/background-chat.jpg
+img: css
 imgRes: /assets/chat.png
 link: https://chat-web.roberto-londono.website/
 img_alt: Chat web capture
@@ -14,23 +14,23 @@ tags:
 ---
 
 Web Chat: A Comprehensive ChatGPT API with a User-Friendly Interface
-
+<br><br>
 Web Chat is a comprehensive solution that provides a user-friendly interface to interact with ChatGPT's powerful capabilities. It offers a secure and scalable API that abstracts away the complexities of ChatGPT, making it easier for developers to integrate its functionality into their applications.
-
+<br><br>
 Secure and Scalable API: The API is built using Spring Boot and Spring Security, ensuring secure access and authentication. It provides a well-defined interface for interacting with ChatGPT's various features, enabling developers to seamlessly integrate it into their applications.
-
+<br><br>
 Responsive Web Chat Interface: The front-end is developed using Svelte, a lightweight JavaScript framework. It provides a user-friendly chat interface that mimics the conventional chat experience. Additionally, the responsive design ensures optimal viewing and interaction across various devices.
-
+<br><br>
 Code Availability
-
+<br><br>
 The source code for both the API and front-end is readily available on GitHub:
-
+<br><br>
 API Source Code: https://github.com/Roberto-GH/chatgpt-api
-
+<br><br>
 Front-end Source Code: https://github.com/Roberto-GH/chatbot-web
-
+<br><br>
 Deployment and Infrastructure
-
+<br><br>
 Backend Deployment: The backend is deployed on AWS using Elastic Container Service (ECS) and Fargate. This containerization approach facilitates efficient execution and scaling of data processing workloads.
-
+<br><br>
 Front-end Deployment: The front-end is deployed using Netlify, a platform specifically designed for deploying static websites. This ensures a reliable and performant hosting solution for the web chat interface.

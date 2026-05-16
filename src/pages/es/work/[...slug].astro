@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
@@ -16,14 +16,15 @@ export async function getStaticPaths() {
   return id.startsWith('es/');
 });
   const paths = pages.map(page => {
-    const [lang, ...slug] = page.slug.split('/');				
-    return { params: { lang, slug: slug.join('/') || undefined }, props: page };
+    const slug = page.id.replace(/^es\//, '');
+    const lang = 'es';
+    return { params: { lang, slug: slug || undefined }, props: page };
   });	
   return paths;
 }
 
 const entry = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
